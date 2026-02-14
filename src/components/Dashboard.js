@@ -59,10 +59,23 @@ function Dashboard() {
 
             {/* Main Statistics */}
             <div className="stats-grid">
-                <div className="stat-card">
+                <div className="stat-card highlight-card">
                     <div className="stat-header">
                         <span className="stat-title">Total Registrations</span>
                         <div className="stat-icon primary">📝</div>
+                    </div>
+                    <div className="stat-value">
+                        {(stats.events?.['cipherville'] || 0) + 
+                         (stats.events?.['dsa-master'] || 0) + 
+                         (stats.events?.['ethitech-mania'] || 0)}
+                    </div>
+                    <div className="stat-label">Cipherville + DSA Master + Ethitech Mania</div>
+                </div>
+
+                <div className="stat-card">
+                    <div className="stat-header">
+                        <span className="stat-title">Total Registrations</span>
+                        <div className="stat-icon primary">📋</div>
                     </div>
                     <div className="stat-value">{stats.totalRegistrations || 0}</div>
                     <div className="stat-label">All event registrations</div>

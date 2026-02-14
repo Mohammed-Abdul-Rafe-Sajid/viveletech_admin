@@ -480,6 +480,30 @@ body {
   height: 6px;
 }
 
+.stat-card.highlight-card {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: 2px solid #6366f1;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  transform: scale(1.05);
+  grid-column: span 1;
+}
+
+.stat-card.highlight-card::before {
+  background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+.stat-card.highlight-card:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.5);
+}
+
+.stat-card.highlight-card .stat-value,
+.stat-card.highlight-card .stat-label,
+.stat-card.highlight-card .stat-title {
+  color: white;
+}
+
 .stat-header {
   display: flex;
   justify-content: space-between;
